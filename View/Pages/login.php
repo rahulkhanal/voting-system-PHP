@@ -67,18 +67,17 @@
 <body>
     <center>
         <h1><span>ஜ۞ஜ</span> मतदान <span>ஜ۞ஜ</span></h1>
-        <form action="/login" method="post">
+        <form method="post" action="../../Model/authentication.php">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address">
+            <input type="text" id="email" name="email" placeholder="Enter your email address">
             <br>
             <br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password">
+            <input type="text" id="password" name="password" placeholder="Enter your password">
             <br>
             <br>
             <button type="submit">Login</button>
         </form>
-
     </center>
 </body>
 
