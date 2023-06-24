@@ -57,7 +57,7 @@
                 <li><a href="../Pages/registerCandidate.php">Register Candidates</a></li>
                 <li><a href="#vote-page">Vote</a></li>
                 <li><a href="#view-voters">View Users</a></li>
-                <li><a href="#view-candidates">Candidates</a></li>
+                <li><a href="../Pages/candidates.php">Candidates</a></li>
             </ul>
         </nav>
     </header>

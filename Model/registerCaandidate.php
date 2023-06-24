@@ -10,8 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $statement->bind_param("sss", $name, $position, $qualification);
         $statement->execute();
         if ($statement->affected_rows > 0) {
-            echo "Candidate inserted successfully";
+            echo '<script>alert("Candidate inserted successfully");</script>';
+            header("Location: ../View/Pages/registerCandidate.php");
+            exit();
+        } else {
+            echo '<script>alert("Failed to insert into database");</script>';
+            header("Location: ../View/Pages/registerCandidate.php");
+            exit();
         }
+        // $statement->close();
     } catch (\Throwable $th) {
         die($th);
     }
