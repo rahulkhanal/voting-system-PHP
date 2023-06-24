@@ -52,7 +52,7 @@
     <header>
         <nav class="navbar">
             <ul class="navbar-list">
-                <li><a href="#home">Home</a></li>
+                <li><a href="../Pages/home.php">Home</a></li>
                 <li><a href="../Pages/registerVoters.php">Register Voters</a></li>
                 <li><a href="../Pages/registerCandidate.php">Register Candidates</a></li>
                 <li><a href="#vote-page">Vote Page</a></li>
