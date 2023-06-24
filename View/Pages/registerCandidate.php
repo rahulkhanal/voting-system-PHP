@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="../style/index.css">
+
     <style>
         body {
             background-color: #f1f1f1;
@@ -9,8 +11,8 @@
         }
 
         .container {
-            max-width: 400px;
-            margin: 0 auto;
+            max-width: 80%;
+            margin: 12vh auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
@@ -27,7 +29,8 @@
             margin-bottom: 5px;
         }
 
-        .form-group input {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 8px;
             border-radius: 4px;
@@ -48,12 +51,29 @@
             color: red;
             font-size: 14px;
         }
+
+        #image {
+            display: none;
+        }
+
+        img {
+            width: 100px;
+        }
     </style>
 </head>
 
 <body>
+    <?php include '../Components/navigation.php'; ?>
     <div class="container">
-        <h2>Register User</h2>
+        <h2>Add Candidate</h2>
+        <div class="form-group">
+            <label for="image">
+                <center style="padding: 1rem 0">
+                    <img src="./user.png" />
+                </center>
+            </label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
         <form action="#" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -61,83 +81,20 @@
                 <span class="error" id="name-error"></span>
             </div>
             <div class="form-group">
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-                <span class="error" id="address-error"></span>
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+                <span class="error" id="position-error"></span>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error" id="email-error"></span>
+                <label for="qualification">Qualification:</label>
+                <textarea id="qualification" name="qualification" required></textarea>
+                <span class="error" id="qualification-error"></span>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <span class="error" id="password-error"></span>
-            </div>
-            <div class="form-group">
-                <label for="role">Role:</label>
-                <input type="text" id="role" name="role" required>
-                <span class="error" id="role-error"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Register">
+                <input type="submit" value="Add">
             </div>
         </form>
     </div>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function (event) {
-            var nameInput = document.getElementById('name');
-            var addressInput = document.getElementById('address');
-            var emailInput = document.getElementById('email');
-            var passwordInput = document.getElementById('password');
-            var roleInput = document.getElementById('role');
-            var nameError = document.getElementById('name-error');
-            var addressError = document.getElementById('address-error');
-            var emailError = document.getElementById('email-error');
-            var passwordError = document.getElementById('password-error');
-            var roleError = document.getElementById('role-error');
-            var nameRegex = /^[a-zA-Z\s]+$/;
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            var passwordRegex = /^.{8,}$/;
-
-            if (!nameRegex.test(nameInput.value)) {
-                nameError.textContent = 'Name is invalid.';
-                event.preventDefault();
-            } else {
-                nameError.textContent = '';
-            }
-
-            if (addressInput.value.trim() === '') {
-                addressError.textContent = 'Address is required.';
-                event.preventDefault();
-            } else {
-                addressError.textContent = '';
-            }
-
-            if (!emailRegex.test(emailInput.value)) {
-                emailError.textContent = 'Email is invalid.';
-                event.preventDefault();
-            } else {
-                emailError.textContent = '';
-            }
-
-            if (!passwordRegex.test(passwordInput.value)) {
-                passwordError.textContent = 'Password must be at least 8 characters long.';
-                event.preventDefault();
-            } else {
-                passwordError.textContent = '';
-            }
-
-            if (roleInput.value.trim() === '') {
-                roleError.textContent = 'Role is required.';
-                event.preventDefault();
-            } else {
-                roleError.textContent = '';
-            }
-        });
-    </script>
 </body>
 
 </html>

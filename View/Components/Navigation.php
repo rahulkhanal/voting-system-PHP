@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="../style/index.css">
+
 </head>
 <style>
     body {
@@ -52,8 +53,8 @@
         <nav class="navbar">
             <ul class="navbar-list">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#register-candidate">Register Candidate</a></li>
-                <li><a href="#register-voters">Register Voters</a></li>
+                <li><a href="../Pages/registerVoters.php">Register Voters</a></li>
+                <li><a href="../Pages/registerCandidate.php">Register Candidates</a></li>
                 <li><a href="#vote-page">Vote Page</a></li>
                 <li><a href="#view-voters">View Voters</a></li>
                 <li><a href="#view-candidates">View Candidates</a></li>
