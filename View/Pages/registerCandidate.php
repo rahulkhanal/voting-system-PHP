@@ -74,7 +74,7 @@
             </label>
             <input type="file" id="image" name="image" accept="image/*" required>
         </div>
-        <form action="#" method="post">
+        <form action="../../Model/registerCaandidate.php" method="get">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
