@@ -20,10 +20,47 @@ $result = $connection->query($query);
             width: 100%;
         }
 
+        tr {
+            text-align: center;
+        }
+
+        th {
+            background-color: red;
+            color: #fff;
+        }
+
         th,
-        td {
+        tr {
             border: 1px solid black;
             padding: 8px;
+        }
+
+        .dangerBtn {
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+        }
+
+        .successBtn {
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        td:last-child {
+            padding: 0.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            /* border: none; */
         }
     </style>
 </head>
@@ -51,8 +88,10 @@ $result = $connection->query($query);
                         <?php echo $row["qualification"]; ?>
                     </td>
                     <td>
-                        <a href="../../Controller/edit_candidate.php?id=<?php echo $row["id"]; ?>">Edit</a>
-                        <a href="../../Controller/delete_candidate_layor.php?id=<?php echo $row["id"]; ?>">Delete</a>
+                        <a href="../../View/Pages/updateCandidate.php?id=<?php echo $row["id"]; ?>"><button
+                                class="successBtn">Edit</button></a>
+                        <a href="../../Controller/delete_candidate_layor.php?id=<?php echo $row["id"]; ?>"><button
+                                class="dangerBtn">Delete</button></a>
                     </td>
                 </tr>
             <?php endwhile; ?>
