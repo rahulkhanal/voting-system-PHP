@@ -32,6 +32,15 @@
             padding: 8px;
             border-radius: 4px;
             border: 1px solid #ccc;
+            font-size: 1.2rem;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1.2rem;
         }
 
         .form-group input[type="submit"] {
@@ -78,8 +87,10 @@
             </div>
             <div class="form-group">
                 <label for="role">Role:</label>
-                <input type="text" id="role" name="role" required>
-                <span class="error" id="role-error"></span>
+                <select name="" id="">
+                    <option value="voters">voters</option>
+                    <option value="admin">Admin</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Register">
