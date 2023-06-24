@@ -88,6 +88,7 @@
             <div class="form-group">
                 <label for="role">Role:</label>
                 <select name="" id="">
+                    <option value="voters" selected hidden>Select The Roles</option>
                     <option value="voters">voters</option>
                     <option value="admin">Admin</option>
                 </select>

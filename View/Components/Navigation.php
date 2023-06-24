@@ -53,11 +53,11 @@
         <nav class="navbar">
             <ul class="navbar-list">
                 <li><a href="../Pages/home.php">Home</a></li>
-                <li><a href="../Pages/registerVoters.php">Register Voters</a></li>
+                <li><a href="../Pages/registerVoters.php">Register Users</a></li>
                 <li><a href="../Pages/registerCandidate.php">Register Candidates</a></li>
-                <li><a href="#vote-page">Vote Page</a></li>
-                <li><a href="#view-voters">View Voters</a></li>
-                <li><a href="#view-candidates">View Candidates</a></li>
+                <li><a href="#vote-page">Vote</a></li>
+                <li><a href="#view-voters">View Users</a></li>
+                <li><a href="#view-candidates">Candidates</a></li>
             </ul>
         </nav>
     </header>
