@@ -1,17 +1,17 @@
 <?php
 include "./connection.php";
 if ($_SERVER) {
-    $cid = $_GET["id"];
-    echo $cid;
-    if ($cid) {
-        echo $cid;
+    $uid = $_GET["id"];
+    if ($uid) {
         $name = $_POST["name"];
-        $position = $_POST["position"];
-        $qualification = $_POST["qualification"];
-        $query = "UPDATE candidates SET name=?, position=?, qualification=? WHERE id=?";
+        $address = $_POST["address"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+        $role = $_POST["role"];
+        $query = "UPDATE users SET name=?, address=?, email=?, password=?, role=? WHERE id=?";
         try {
             $statement = $connection->prepare($query);
-            $statement->bind_param("sssi", $name, $position, $qualification, $cid);
+            $statement->bind_param("sssssi", $name, $address, $email, $password, $role, $uid);
             $statement->execute();
             if ($statement->affected_rows > 0) {
                 echo '<script>alert("Candidate inserted successfully");</script>';
@@ -26,7 +26,8 @@ if ($_SERVER) {
         } catch (\Throwable $th) {
             die($th);
         }
-    } else {
+    } 
+    else {
         $name = $_GET["name"];
         $address = $_GET["address"];
         $email = $_GET["email"];
