@@ -72,7 +72,9 @@ if (!isset($_SESSION['email'])) {
             </tr>
         </table>
     </div>
-    <button>Log Out</button>
+    <form action="../../Controller/LogOut.php" method="post">
+        <button type="submit" name="logout_button">Log Out</button>
+    </form>
 </body>
 
 </html>
