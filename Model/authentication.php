@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include "./connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
@@ -9,6 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows === 0) {
             die("No User Found");
         } else {
+            $user = $result->fetch_assoc();
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['role'] = $user['role'];
             header("Location: ../View/Pages/home.php");
             exit();
         }

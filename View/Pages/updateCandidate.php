@@ -1,3 +1,8 @@
+<?php session_start();
+if (!isset($_SESSION['email'])) {
+    header("Location: ../Pages/index.php");
+    exit();
+} ?>
 <?php
 include "../../Model/connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
