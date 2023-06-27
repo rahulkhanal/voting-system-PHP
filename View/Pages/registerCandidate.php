@@ -2,7 +2,12 @@
 if (!isset($_SESSION['email'])) {
     header("Location: ../Pages/index.php");
     exit();
-} ?>
+}
+$authorizedRoles = ['admin'];
+if (!in_array($_SESSION['role'], $authorizedRoles)) {
+    die("You are not authorized to access this page.");
+}
+?>
 <!DOCTYPE html>
 <html>
 

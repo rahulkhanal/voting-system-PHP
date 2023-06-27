@@ -1,4 +1,3 @@
-
 <?php session_start();
 if (!isset($_SESSION['email'])) {
     header("Location: ../Pages/index.php");
@@ -70,7 +69,7 @@ if (!isset($_SESSION['email'])) {
     <?php include '../Components/navigation.php'; ?>
     <div class="container">
         <h2>Register User</h2>
-        <form action="#" method="post">
+        <form action="../../Model/registerVoter.php">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -93,7 +92,7 @@ if (!isset($_SESSION['email'])) {
             </div>
             <div class="form-group">
                 <label for="role">Role:</label>
-                <select name="" id="">
+                <select name="role" id="">
                     <option value="voters" selected hidden>Select The Roles</option>
                     <option value="voters">voters</option>
                     <option value="admin">Admin</option>

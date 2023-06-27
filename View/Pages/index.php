@@ -67,7 +67,7 @@
 <body>
     <center>
         <h1><span>ஜ۞ஜ</span> मतदान <span>ஜ۞ஜ</span></h1>
-        <form method="post" action="../../Model/authentication.php">
+        <form method="post" onsubmit="handleForm()" action="../../Model/authentication.php">
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" placeholder="Enter your email address">
             <br>
@@ -80,5 +80,15 @@
         </form>
     </center>
 </body>
+<script>
+    function handleForm(e) {
+        e.preventDefault();
+        let email = document.getElementsByTagName("input")[0].value
+        let password = document.getElementsByTagName("input")[1].value
+        if (!email || !password) {
+            alert("empty value cant authorize")
+        }
+    }
+</script>
 
 </html>
