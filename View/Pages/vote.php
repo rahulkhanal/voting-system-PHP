@@ -19,21 +19,25 @@ $result = $connection->query($query);
     .container {
         padding: 1rem;
     }
-    th{
+
+    th {
         padding: 1rem 0;
         background-color: skyblue;
         font-size: 1.2rem;
     }
+
     table {
         border: 2px solid black;
         width: 80%;
         margin: 10vh auto;
     }
-    td{
+
+    td {
         text-align: center;
         padding: 0rem 3rem;
     }
-    button{
+
+    button {
         background-color: green;
         color: #fff;
         border: none;
@@ -45,7 +49,9 @@ $result = $connection->query($query);
 <body>
     <?php include '../Components/navigation.php'; ?>
     <div class="container">
-        <h2>Total Candidate: 9</h2>
+        <h2>Total Candidate:
+            <?php echo ($result->num_rows) ?>
+        </h2>
         <table>
             <tr>
                 <th>Name</th>
@@ -53,8 +59,8 @@ $result = $connection->query($query);
                 <th>Qualifiacation</th>
                 <th>Votes</th>
             </tr>
+            <?php while ($row = $result->fetch_assoc()): ?>
             <tr>
-                <?php while ($row = $result->fetch_assoc()): ?>
                     <td>
                         <?php echo $row["name"]; ?>
                     </td>
@@ -69,8 +75,8 @@ $result = $connection->query($query);
                             <button>Vote</button>
                         </form>
                     </td>
+                </tr>
                 <?php endwhile; ?>
-            </tr>
         </table>
     </div>
 </body>
