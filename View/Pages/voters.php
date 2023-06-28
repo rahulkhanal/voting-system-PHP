@@ -73,7 +73,7 @@ $result = $connection->query($query);
 <body>
     <?php include "../Components/Navigation.php" ?>
     <div class="container">
-        <h1>Candidate List</h1>
+        <h1>Voters List</h1>
         <table>
             <tr>
                 <th>Name</th>

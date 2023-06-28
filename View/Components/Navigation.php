@@ -55,7 +55,7 @@
                 <li><a href="../Pages/home.php">Home</a></li>
                 <li><a href="../Pages/registerVoters.php">Register Users</a></li>
                 <li><a href="../Pages/registerCandidate.php">Register Candidates</a></li>
-                <li><a href="#vote-page">Vote</a></li>
+                <li><a href="../Pages/vote.php">Vote</a></li>
                 <li><a href="../Pages/voters.php">Users</a></li>
                 <li><a href="../Pages/candidates.php">Candidates</a></li>
             </ul>
